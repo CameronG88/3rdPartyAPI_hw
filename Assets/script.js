@@ -1,9 +1,12 @@
 var currentHour = moment().format("H");
+var currentDate = moment().format("[Today is] dddd, MMMM Do [and it's currently] hA");
 console.log(currentHour);
+console.log(currentDate);
 var containerDiv = $("#hourContainer");
+
 startPage();
 function startPage() {
-  
+  $("#currentDay").text(currentDate);
     for (let index = 8; index < 19; index++) {
         $("#" + index).val(localStorage.getItem(index));
         // console.log(localStorage.getitem(index));
